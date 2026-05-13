@@ -4,98 +4,90 @@
 **Project Name:** FRESH: Fresh vs Rotten Fruit Classification System
 
 **Description:**
-This project is a fruit freshness classification system built with TensorFlow. It analyzes uploaded fruit images and predicts whether they are **Fresh** or **Rotten**. The project also includes a training notebook for model development, a saved trained model for reuse, and a desktop GUI for easy image selection, prediction, and result viewing. The GUI supports multiple image uploads and includes Grad-CAM explainability so users can see which parts of the image influenced the model's prediction.
+This project is a TensorFlow-based fruit freshness classifier. It takes an uploaded fruit image and predicts whether the fruit is **Fresh** or **Rotten**. The repository includes a training notebook for model development, a saved model for reuse, and a desktop GUI for easy prediction. The GUI supports multiple image uploads and includes Grad-CAM explainability so users can see which image areas influenced the prediction.
 
 ---
 
 ## 2. Group / Team Members
 **Repository Link:** https://github.com/JethroIsHere/Fresh.git
 
-## Team Contributions
+### Team Contributions
 
-### 1 Kurt Allen Alorro (`@kurykatsu24`)
+1. **Kurt Allen Alorro** (`@kurykatsu24`)
+- Email: kurtallen.alorro@wvsu.edu.ph
 - Role: Project coordinator, documentation lead, and ideation
-- Assigned: setup, run instructions, and project scope
-- Contributions:
-	- [ ] Updated README team details and run steps
-	- [ ] Led ideation and scope notes
+- Assigned files: `README.md`
+- Contribution summary: planned the project scope, organized documentation, and led ideation for the system design.
 
-
-### 2 Christine Joy Maravilla (`@ChristineM24`)
+2. **Christine Joy Maravilla** (`@ChristineM24`)
+- Email: christinejoy.maravilla@wvsu.edu.ph
 - Role: Data preparation and dataset management
-- Assigned: `fruit_images/` and dataset notes
-- Completed work:
-	- [ ] Organized `fruit_images/` and verified naming conventions
-	- [ ] Added data preparation notes
-    - [ ] Ran rigorous testing on `fruit_classification.ipynb`
+- Assigned files: `fruit_images/`
+- Contribution summary: organized the fruit image dataset, checked naming consistency, and prepared image assets for training and testing.
 
-### 3 Jazylle Mae Senibalo (`@yllezy`)
-- Role: Model training and evaluation; prepare presentation slides (PPT)
-- Assigned: model evaluation notes and PPT deliverable
-- Completed work:
-	- [ ] Updated notebook workflow and recorded metrics
-	- [ ] Prepared PPT outline 
+3. **Jazylle Mae Senibalo** (`@yllezy`)
+- Email: jazyllemae.senibalo@wvsu.edu.ph
+- Role: Model training, evaluation, and presentation slides (PPT)
+- Assigned files: `fruit_classification.ipynb`, `FRESH_PPT.pdf`
+- Contribution summary: handled notebook training, evaluated model performance, and prepared the presentation slides for defense.
 
-### 4 Duke Salfred Bocala (`@enryu`)
+4. **Duke Salfred Bocala** (`@enryu`)
+- Email: dukesalfredbocala4@gmail.com
 - Role: GUI integration and prediction flow
-- Assigned: `fruit_gui.py` improvements and explainability
-- Completed work:
-	- [ ] Updated GUI controls and tested explainability popup
+- Assigned files: `fruit_gui.py`
+- Contribution summary: developed the desktop interface, integrated prediction logic, and added the explainability popup.
 
-### 5 Jethro Roland Dañocup (`@JethroIsHere`)
+5. **Jethro Roland Dañocup** (`@JethroIsHere`)
+- Email: danocupjethro913@gmail.com
 - Role: Testing, QA, dependency checks, final submission, and model exports
-- Assigned: `fruit_classification.ipynb` (final runs) and `requirements.txt`
-- Completed work:
-	- [ ] Verified model export and requirements
-	- [ ] Ran final training/evaluation and export `fruit_classification_model.h5`
+- Assigned files: `requirements.txt`, `fruit_classification_model.h5`
+- Contribution summary: finalized the trained model, managed dependencies, checked the full workflow, and prepared the project for submission.
+
 ---
 
 ## 3. Prerequisites / Requirements
 
 ### Programming Language
-- Python 3.10+ (recommended: Python 3.10 or Python 3.11)
+- Python 3.10 or Python 3.11
 
-### Required Libraries
-Install dependencies from `requirements.txt`:
+### Required Libraries / Dependencies
+Install the dependencies listed in `requirements.txt`:
 - tensorflow
 - numpy
 - pillow
 - customtkinter
 - matplotlib
 - scipy
-
-Optional for notebook workflows:
 - jupyter
+
+If the model file is stored through Git LFS, make sure Git LFS is installed on your machine before cloning or pulling the repository.
 
 ---
 
 ## 4. How to Run the Program
 
-### A. Clone and open project
+### A. Clone the repository
 ```powershell
 git clone https://github.com/JethroIsHere/Fresh.git
 cd Fresh
 ```
 
-### B. Create and activate virtual environment (Windows PowerShell)
+### B. Create and activate a virtual environment
 ```powershell
 python -m venv venv
 Set-ExecutionPolicy -Scope Process -ExecutionPolicy RemoteSigned
 .\venv\Scripts\Activate.ps1
 ```
 
-### C. Install dependencies
+### C. Install the required libraries
 ```powershell
 pip install -r requirements.txt
 ```
 
-### D. Ensure model file exists
-Before running GUI, confirm this file exists in the project root:
-- `fruit_classification_model.h5`
+### D. Prepare the model file
+Make sure `fruit_classification_model.h5` is present in the project root. If it is missing, open and run `fruit_classification.ipynb` first to train or export the model.
 
-If missing, run the notebook first (`fruit_classification.ipynb`) to train/export the model.
-
-### E. Run the GUI app
+### E. Run the GUI
 ```powershell
 python fruit_gui.py
 ```
@@ -104,8 +96,9 @@ python fruit_gui.py
 
 ## Configuration Notes
 - Keep `fruit_classification_model.h5` in the same folder as `fruit_gui.py`.
-- The GUI expects image inputs (`.jpg`, `.jpeg`, `.png`, `.webp`).
-- Default model path in code: `MODEL_PATH = 'fruit_classification_model.h5'`.
+- The GUI accepts `.jpg`, `.jpeg`, `.png`, and `.webp` files.
+- The model path used by the app is `fruit_classification_model.h5`.
+- If Git LFS is enabled on the repository, install Git LFS before cloning so the model file downloads correctly.
 
 ---
 
