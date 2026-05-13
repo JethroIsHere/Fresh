@@ -52,17 +52,6 @@ This project is a fruit freshness classification system built with TensorFlow. I
 
 ## 3. Prerequisites / Requirements
 
-### Folder Setup
-Create a project folder named by your group (for example):
-- `groupname/` or
-- `groupnumber/`
-
-Example:
-```powershell
-mkdir group5
-cd group5
-```
-
 ### Programming Language
 - Python 3.10+ (recommended: Python 3.10 or Python 3.11)
 
